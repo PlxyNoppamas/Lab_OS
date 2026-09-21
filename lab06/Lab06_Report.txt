@@ -1,0 +1,49 @@
+======================================================
+COE67-222 Operating Systems - Lab 06 Report
+
+Name: นางสาวนพมาศ ปานเพชร
+Student ID: 67113084
+
+======================================================
+
+1. FIFO vs LRU :
+
+LRU performed better than FIFO for the given reference string because
+LRU considers how recently each page has been used.
+
+FIFO removes the page that entered memory first, even if that page
+was recently used and may be needed again soon.
+
+LRU keeps track of page usage and removes the page that has not been
+accessed for the longest time.
+
+For the given reference string with 3 frames, FIFO produced 9 page
+faults while LRU produced 7 page faults. Therefore, LRU caused fewer
+page faults for this memory access pattern.
+
+
+2. Understanding Thrashing :
+
+Thrashing occurs when the operating system spends too much time moving
+pages between physical RAM and disk instead of executing the actual
+program.
+
+Scenario 2 had a much higher processing time because the program
+constantly performed disk read and write operations.
+
+Disk access is much slower than RAM access. Therefore, when the system
+has to swap data between RAM and disk repeatedly, the overall
+performance becomes much slower.
+
+
+3. AI Engineering Decision:
+
+Lowering the batch_size reduces the amount of data that the AI model
+needs to keep in memory at the same time.
+
+This decreases RAM or VRAM usage and makes it more likely that the
+working data can fit inside physical memory.
+
+As a result, the operating system does not need to swap pages between
+RAM and disk as frequently. This reduces page faults and helps prevent
+Thrashing, allowing the AI training process to run more efficiently.
